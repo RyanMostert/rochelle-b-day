@@ -1,5 +1,40 @@
-# Vue 3 + TypeScript + Vite
+# 🎂 Rochelle's Birthday Website
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A modern, vibrant, and heartfelt single-page application built specifically for Rochelle's birthday. The site features a personalized design with glassmorphism aesthetics, smooth animations, and a heartfelt message in Afrikaans.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 🌟 Key Features
+
+*   **Animated Hero Section:** A festive greeting with an interactive CSS-animated birthday cake.
+*   **Infinite Photo Gallery:** A seamless, horizontally scrolling marquee featuring 8 personalized photos with hover-to-pause functionality.
+*   **Heartfelt Afrikaans Message:** A personalized message card with glassmorphism effects and scroll-triggered animations.
+*   **Responsive Design:** Fully optimized for mobile devices so she can view it on her phone.
+*   **Modern Aesthetics:** Uses vibrant color palettes, soft shadows, and high-performance micro-animations.
+
+## 🛠 Tech Stack
+
+*   **Vue 3** (Composition API with `<script setup>`)
+*   **TypeScript** for robust development.
+*   **Vite** for lightning-fast bundling.
+*   **CSS3** (Variables, Keyframes, and IntersectionObserver)
+
+## 🚀 Getting Started
+
+### 1. Installation
+```bash
+npm install
+```
+
+### 2. Development
+```bash
+npm run dev
+```
+Open `http://localhost:5173/` in your browser.
+
+### 3. Production Build
+```bash
+npm run build
+```
+The production-ready files will be generated in the `dist/` folder.
+
+---
+*Gemaak met liefde vir Rochelle se spesiale dag.*
