@@ -32,7 +32,7 @@ onUnmounted(() => {
     <div class="message-container">
       <div class="message-content glass" :class="{ visible: isVisible }">
         <div class="decoration-top">
-          <span class="heart">💕</span>
+          <span class="heart" aria-hidden="true">💕</span>
         </div>
         
         <h2 class="message-title" :class="{ visible: isVisible }">Gelukkige Verjaarsdag, Rochelle!</h2>
@@ -60,17 +60,17 @@ onUnmounted(() => {
         </div>
         
         <div class="decoration-bottom">
-          <span class="sparkle">✨</span>
-          <span class="sparkle">💖</span>
-          <span class="sparkle">✨</span>
+          <span class="sparkle" aria-hidden="true">✨</span>
+          <span class="sparkle" aria-hidden="true">💖</span>
+          <span class="sparkle" aria-hidden="true">✨</span>
         </div>
       </div>
       
       <div class="floating-elements">
-        <span class="float-element element-1">🎁</span>
-        <span class="float-element element-2">🎂</span>
-        <span class="float-element element-3">🥂</span>
-        <span class="float-element element-4">🌟</span>
+        <span class="float-element element-1" aria-hidden="true">🎁</span>
+        <span class="float-element element-2" aria-hidden="true">🎂</span>
+        <span class="float-element element-3" aria-hidden="true">🥂</span>
+        <span class="float-element element-4" aria-hidden="true">🌟</span>
       </div>
     </div>
   </section>

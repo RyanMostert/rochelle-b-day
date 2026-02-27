@@ -25,12 +25,12 @@
       <p class="subtitle">Vier jou spesiale dag</p>
       
       <div class="decorations">
-        <span class="confetti confetti-1" style="--d: 0s; --x: 10%; --y: 10%;">🎉</span>
-        <span class="confetti confetti-2" style="--d: 0.5s; --x: 85%; --y: 15%;">🎊</span>
-        <span class="confetti confetti-3" style="--d: 1.2s; --x: 5%; --y: 25%;">✨</span>
-        <span class="confetti confetti-4" style="--d: 1.8s; --x: 90%; --y: 20%;">💖</span>
-        <span class="confetti confetti-5" style="--d: 2.5s; --x: 75%; --y: 8%;">🎈</span>
-        <span class="confetti confetti-6" style="--d: 3s; --x: 15%; --y: 35%;">🌸</span>
+        <span class="confetti confetti-1" style="--d: 0s; --x: 10%; --y: 10%;" aria-hidden="true">🎉</span>
+        <span class="confetti confetti-2" style="--d: 0.5s; --x: 85%; --y: 15%;" aria-hidden="true">🎊</span>
+        <span class="confetti confetti-3" style="--d: 1.2s; --x: 5%; --y: 25%;" aria-hidden="true">✨</span>
+        <span class="confetti confetti-4" style="--d: 1.8s; --x: 90%; --y: 20%;" aria-hidden="true">💖</span>
+        <span class="confetti confetti-5" style="--d: 2.5s; --x: 75%; --y: 8%;" aria-hidden="true">🎈</span>
+        <span class="confetti confetti-6" style="--d: 3s; --x: 15%; --y: 35%;" aria-hidden="true">🌸</span>
       </div>
     </div>
     
@@ -225,7 +225,12 @@ onMounted(() => {
   background: none;
   border: none;
   cursor: pointer;
-  outline: none;
+}
+
+.scroll-indicator:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
 }
 
 .scroll-indicator.visible {

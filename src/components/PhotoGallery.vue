@@ -4,14 +4,14 @@ import { ref, onMounted } from 'vue'
 const isVisible = ref(false)
 
 const photos = [
-  { id: 1, src: new URL('../assets/Photos/WhatsApp Image 2026-02-27 at 4.31.49 PM.jpeg', import.meta.url).href, alt: 'Herinneringe 1' },
-  { id: 2, src: new URL('../assets/Photos/WhatsApp Image 2026-02-27 at 4.31.50 PM (1).jpeg', import.meta.url).href, alt: 'Herinneringe 2' },
-  { id: 3, src: new URL('../assets/Photos/WhatsApp Image 2026-02-27 at 4.31.50 PM.jpeg', import.meta.url).href, alt: 'Herinneringe 3' },
-  { id: 4, src: new URL('../assets/Photos/WhatsApp Image 2026-02-27 at 4.31.51 PM (1).jpeg', import.meta.url).href, alt: 'Herinneringe 4' },
-  { id: 5, src: new URL('../assets/Photos/WhatsApp Image 2026-02-27 at 4.31.51 PM (2).jpeg', import.meta.url).href, alt: 'Herinneringe 5' },
-  { id: 6, src: new URL('../assets/Photos/WhatsApp Image 2026-02-27 at 4.31.51 PM.jpeg', import.meta.url).href, alt: 'Herinneringe 6' },
-  { id: 7, src: new URL('../assets/Photos/WhatsApp Image 2026-02-27 at 4.31.52 PM (1).jpeg', import.meta.url).href, alt: 'Herinneringe 7' },
-  { id: 8, src: new URL('../assets/Photos/WhatsApp Image 2026-02-27 at 4.31.52 PM.jpeg', import.meta.url).href, alt: 'Herinneringe 8' },
+  { id: 1, src: new URL('../assets/Photos/photo-1.jpg', import.meta.url).href, alt: 'Herinneringe 1' },
+  { id: 2, src: new URL('../assets/Photos/photo-2.jpg', import.meta.url).href, alt: 'Herinneringe 2' },
+  { id: 3, src: new URL('../assets/Photos/photo-3.jpg', import.meta.url).href, alt: 'Herinneringe 3' },
+  { id: 4, src: new URL('../assets/Photos/photo-4.jpg', import.meta.url).href, alt: 'Herinneringe 4' },
+  { id: 5, src: new URL('../assets/Photos/photo-5.jpg', import.meta.url).href, alt: 'Herinneringe 5' },
+  { id: 6, src: new URL('../assets/Photos/photo-6.jpg', import.meta.url).href, alt: 'Herinneringe 6' },
+  { id: 7, src: new URL('../assets/Photos/photo-7.jpg', import.meta.url).href, alt: 'Herinneringe 7' },
+  { id: 8, src: new URL('../assets/Photos/photo-8.jpg', import.meta.url).href, alt: 'Herinneringe 8' },
 ]
 
 onMounted(() => {
@@ -218,13 +218,20 @@ onMounted(() => {
   .gallery-section {
     padding: 2rem 0;
   }
-  
+
   .photo-card {
     width: 220px;
   }
-  
+
   .photo-frame img {
     height: 280px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-track {
+    animation-duration: 20s !important;
+    animation-iteration-count: infinite !important;
   }
 }
 </style>
