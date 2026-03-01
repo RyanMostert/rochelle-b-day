@@ -39,13 +39,15 @@ onUnmounted(() => {
         
         <div class="message-body" :class="{ visible: isVisible }">
           <p class="message-paragraph">
-            Vandag gaan alles oor jou — 'n waarlik wonderlike mens wat soveel lig en vreugde bring vir almal om jou. 
-            Jou vriendelikheid, jou glimlag en jou ongelooflike gees maak die wêreld 'n beter plek.
+            Rochellie, vandag gaan alles oor jou! Jys regtig n wonderlike mens wat soveel lig en vreugde bring vir almal om jou. 
+            Ek kan nie dink om lewe te kan doen sonder jou nie. Jy laat my streef om n beter weergawe te wees van myself en eks oneindig dankbaar.
           </p>
           
           <p class="message-paragraph">
             Mag hierdie nuwe jaar van jou lewe gevul wees met eindelose laggies, avonture en al die geluk wat jy verdien. 
-            Mag jou drome vlerke kry en jou hart gevul wees met verwondering.
+            Mag jou drome vlerke kry en jou hart gevul wees met verwondering. Hopelik veroorsaak ek nie moeilikheid vir jou die jaar nie.
+            Kom ons hoop jou nikke is ook weg👀(grappie)
+            Ek kan nie wag om meer jare saam met jou te deel nie. Elke dag saam met jou is n dag vir die boeke. 
           </p>
           
           <p class="message-paragraph">
@@ -55,8 +57,8 @@ onUnmounted(() => {
         </div>
         
         <div class="signature" :class="{ visible: isVisible }">
-          <p>Met al my liefde,</p>
-          <span class="signature-name">Jou Spesiale Iemand</span>
+          <p>Ek is oneindig lief vir jou💖</p>
+          <span class="signature-name">Liefde van jou irriterend kerel</span>
         </div>
         
         <div class="decoration-bottom">

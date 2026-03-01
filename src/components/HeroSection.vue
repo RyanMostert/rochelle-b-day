@@ -21,6 +21,10 @@
       </h1>
       
       <h2 class="name">Rochelle!</h2>
+      <h2 class="age">
+        <span class="old-age" :class="{ struck }">22</span>
+        <span class="new-age" :class="{ visible: showNew }">21</span>
+      </h2>
       
       <p class="subtitle">Vier jou spesiale dag</p>
       
@@ -42,9 +46,33 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const isVisible = ref(false)
+const struck = ref(false)
+const showNew = ref(false)
+
+let timer: ReturnType<typeof setTimeout>
+
+function runLoop() {
+  struck.value = false
+  showNew.value = false
+
+  timer = setTimeout(() => {
+    struck.value = true
+
+    timer = setTimeout(() => {
+      showNew.value = true
+
+      timer = setTimeout(() => {
+        struck.value = false
+        showNew.value = false
+
+        timer = setTimeout(runLoop, 600)
+      }, 1800)
+    }, 700)
+  }, 1000)
+}
 
 const scrollToGallery = () => {
   const gallery = document.querySelector('.gallery-section')
@@ -55,7 +83,10 @@ onMounted(() => {
   setTimeout(() => {
     isVisible.value = true
   }, 100)
+  runLoop()
 })
+
+onUnmounted(() => clearTimeout(timer))
 </script>
 
 <style scoped>
@@ -184,8 +215,62 @@ onMounted(() => {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin: 1rem 0;
+  margin: 0.25rem 0;
   animation: pulse 2s ease-in-out infinite;
+}
+
+.age {
+  font-size: clamp(2rem, 8vw, 5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 0.25rem 0;
+}
+
+.old-age {
+  color: var(--color-text-light);
+  position: relative;
+}
+
+.old-age::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: 50%;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-primary);
+  transform: translateY(-50%) rotate(-1.5deg);
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.old-age.struck::after {
+  clip-path: inset(0 0% 0 0);
+}
+
+.new-age {
+  color: var(--color-primary);
+  display: inline-block;
+  overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  margin-left: 0;
+  transform: translateX(-6px);
+  transition:
+    max-width 0.55s cubic-bezier(0.34, 1.4, 0.64, 1),
+    margin-left 0.55s cubic-bezier(0.34, 1.4, 0.64, 1),
+    opacity 0.35s ease,
+    transform 0.55s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+.new-age.visible {
+  max-width: 3ch;
+  opacity: 1;
+  margin-left: 0.75rem;
+  transform: translateX(0);
 }
 
 .subtitle {
